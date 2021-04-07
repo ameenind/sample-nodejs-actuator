@@ -1,0 +1,12 @@
+
+---
+applications:
+- name: sample-nodejs-actuator
+  memory: 512M
+  disk_quota: 1G
+  instances: 1
+  command:  node server/main.js
+  buildpack: nodejs_buildpack
+  health-check-type: http
+  health-check-http-endpoint: /health
+
